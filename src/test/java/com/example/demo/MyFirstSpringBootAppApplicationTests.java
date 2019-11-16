@@ -13,6 +13,7 @@ public class MyFirstSpringBootAppApplicationTests
     @Test
     public void contextLoads()
     {
+        System.out.println("Hello Test");
     }
 
 }
