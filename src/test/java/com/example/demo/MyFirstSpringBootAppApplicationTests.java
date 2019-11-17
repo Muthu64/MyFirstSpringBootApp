@@ -13,6 +13,9 @@ public class MyFirstSpringBootAppApplicationTests
     @Test
     public void contextLoads()
     {
+        String maniupulateThings;
+
+
         System.out.println("Hello Test");
     }
 

@@ -13,8 +13,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityAdapter extends WebSecurityConfigurerAdapter
 {
-
-
     @Autowired
     private UserDetailsService userDetailsService;
 
@@ -27,11 +25,11 @@ public class SecurityAdapter extends WebSecurityConfigurerAdapter
     @Override
     protected void configure( HttpSecurity http ) throws Exception
     {
-        http.authorizeRequests()
+        http.authorizeRequests().anyRequest().permitAll()
                 //.antMatchers("/topic/update/*").hasRole("ADMIN")
 //		.antMatchers("/topics/add/*").hasRole("ADMIN")
 //		.antMatchers("/topics/delete/*").hasRole("ADMIN")
-                .antMatchers( "/topic/getAllTopics" ).hasRole( "ADMIN" )
+                //.antMatchers( "/topic/getAllTopics" ).hasRole( "ADMIN" )
 
 //		.antMatchers("/topic/update").hasRole("ADMIN")
 //		.antMatchers("/topic/add").hasRole("ADMIN")
